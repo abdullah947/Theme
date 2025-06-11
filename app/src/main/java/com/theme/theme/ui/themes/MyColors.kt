@@ -1,7 +1,18 @@
 package com.theme.theme.ui.themes
 
-
 import androidx.compose.ui.graphics.Color
+import com.theme.theme.ui.theme.Black100
+import com.theme.theme.ui.theme.Blue300
+import com.theme.theme.ui.theme.Blue50
+import com.theme.theme.ui.theme.Blue500
+import com.theme.theme.ui.theme.Blue700
+import com.theme.theme.ui.theme.Gray100
+import com.theme.theme.ui.theme.Gray300
+import com.theme.theme.ui.theme.Gray400
+import com.theme.theme.ui.theme.Gray600
+import com.theme.theme.ui.theme.Gray800
+import com.theme.theme.ui.theme.Gray900
+import com.theme.theme.ui.theme.White100
 
 data class MyColors(
     val mainBgColor: Color,
@@ -15,25 +26,25 @@ data class MyColors(
 )
 
 val LightMode = MyColors(
-    mainBgColor = Color(0xFFE2ECFF),
-    componentsBgColor = Color(0xFFFFFFFF),
-    headingColor = Color(0xFF1868FE),
-    subHeadingColor = Color(0xFF494545),
-    termsPolicyColor = Color(0xFF777777),
-    buttonColor = Color(0xFF1868FE),
-    txtFieldBorderColor = Color(0xFF6DA0FF),
-    txtFieldLabelColor = Color(0xFFAAAAAA)
+    mainBgColor = Blue50,
+    componentsBgColor = White100,
+    headingColor = Blue700,
+    subHeadingColor = Gray800,
+    termsPolicyColor = Gray600,
+    buttonColor = Blue700,
+    txtFieldBorderColor = Blue300,
+    txtFieldLabelColor = Gray400
 )
 
 val DarkMode = MyColors(
-    mainBgColor = Color(0xFF000000),
-    componentsBgColor = Color(0xFF292B2F),
-    headingColor = Color(0xFFDAD9DC),
-    subHeadingColor = Color(0xFFDAD9DC),
-    termsPolicyColor = Color(0xFFBBBBBB),
-    buttonColor = Color(0xFF3D89F6),
-    txtFieldBorderColor = Color(0xFF292B2F),
-    txtFieldLabelColor = Color(0xFFBBBBBB)
+    mainBgColor = Black100,
+    componentsBgColor = Gray900,
+    headingColor = Gray100,
+    subHeadingColor = Gray100,
+    termsPolicyColor = Gray300,
+    buttonColor = Blue500,
+    txtFieldBorderColor = Gray900,
+    txtFieldLabelColor = Gray300
 )
 
 

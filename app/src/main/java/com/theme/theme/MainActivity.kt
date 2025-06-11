@@ -14,9 +14,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ThemeTheme {
                 SignupScreen()
-
             }
-
         }
     }
 }

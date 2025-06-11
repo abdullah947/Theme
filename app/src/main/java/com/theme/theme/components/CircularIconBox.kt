@@ -12,8 +12,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
-import com.theme.theme.screens.scaledSize
+import androidx.compose.ui.tooling.preview.Preview
+import com.theme.theme.R
+import com.theme.theme.screens.ThemedPreview
+import com.theme.theme.utils.scaledSize
 import com.theme.theme.ui.theme.AppColors
+import com.theme.theme.ui.theme.ThemeTheme
 import ir.kaaveh.sdpcompose.sdp
 
 @Composable
@@ -33,5 +37,13 @@ fun CircularIconBox(iconRes: Int) {
             colorFilter = if (isDarkMode) ColorFilter.tint(AppColors.headingColor) else null
 
         )
+    }
+}
+
+@ThemedPreview
+@Composable
+fun CircularIconBoxPreview() {
+    ThemeTheme {
+        CircularIconBox(R.drawable.ic_apple)
     }
 }

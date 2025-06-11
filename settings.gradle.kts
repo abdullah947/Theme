@@ -20,6 +20,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Theme"
+rootProject.name = "ComposeLearning"
 include(":app")
  

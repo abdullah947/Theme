@@ -6,9 +6,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
-import com.theme.theme.screens.scaledSize
+import androidx.compose.ui.tooling.preview.Preview
+import com.theme.theme.screens.ThemedPreview
+import com.theme.theme.utils.scaledSize
 import com.theme.theme.ui.theme.AppColors
 import com.theme.theme.ui.theme.PoppinsFontFamily
+import com.theme.theme.ui.theme.ThemeTheme
 import ir.kaaveh.sdpcompose.ssp
 
 @Composable
@@ -51,6 +54,16 @@ fun TermsAndPrivacyText(
             fontWeight = FontWeight.ExtraLight,
             fontFamily = PoppinsFontFamily,
             textDecoration = TextDecoration.Underline
+        )
+    }
+}
+
+@ThemedPreview
+@Composable
+fun TermsAndPrivacyTextPreview() {
+    ThemeTheme {
+        TermsAndPrivacyText(
+            modifier = Modifier
         )
     }
 }

@@ -5,9 +5,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import com.theme.theme.screens.scaledSize
+import androidx.compose.ui.tooling.preview.Preview
+import com.theme.theme.screens.ThemedPreview
+import com.theme.theme.utils.scaledSize
 import com.theme.theme.ui.theme.AppColors
 import com.theme.theme.ui.theme.PoppinsFontFamily
+import com.theme.theme.ui.theme.ThemeTheme
 import ir.kaaveh.sdpcompose.ssp
 
 @Composable
@@ -22,4 +25,14 @@ fun OrLoginWithEmailText(modifier: Modifier = Modifier) {
         fontWeight = FontWeight.SemiBold,
         fontFamily = PoppinsFontFamily
     )
+}
+
+@ThemedPreview
+@Composable
+fun OrLoginWithEmailTextPreview() {
+    ThemeTheme {
+        OrLoginWithEmailText(
+            modifier = Modifier
+        )
+    }
 }

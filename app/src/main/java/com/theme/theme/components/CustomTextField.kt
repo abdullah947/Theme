@@ -1,5 +1,7 @@
 package com.theme.theme.components
 
+
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.LocalTextStyle
@@ -9,9 +11,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
-import com.theme.theme.screens.scaledSize
+import com.theme.theme.screens.ThemedPreview
 import com.theme.theme.ui.theme.AppColors
 import com.theme.theme.ui.theme.PoppinsFontFamily
+import com.theme.theme.ui.theme.ThemeTheme
+import com.theme.theme.utils.scaledSize
 import ir.kaaveh.sdpcompose.sdp
 import ir.kaaveh.sdpcompose.ssp
 
@@ -31,7 +35,9 @@ fun CustomTextField(
                 color = AppColors.txtFieldLabelColor,
                 fontSize = scaledSize(16).ssp,
                 fontWeight = FontWeight.Normal,
-                fontFamily = PoppinsFontFamily
+                fontFamily = PoppinsFontFamily,
+                modifier = Modifier
+                    .background(AppColors.componentsBgColor)
             )
         },
         modifier = modifier.height(scaledSize(52).sdp),
@@ -48,4 +54,17 @@ fun CustomTextField(
             unfocusedBorderColor = AppColors.txtFieldBorderColor,
         )
     )
+}
+
+@ThemedPreview
+@Composable
+fun CustomTextFieldPreview() {
+    ThemeTheme {
+        CustomTextField(
+            value = "",
+            onValueChange = {},
+            labelText = "Email",
+            modifier = Modifier
+        )
+    }
 }
